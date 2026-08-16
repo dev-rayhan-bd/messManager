@@ -1,65 +1,79 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
-
-import '@/global.css';
-
 import { Platform } from 'react-native';
 
 export const Colors = {
   light: {
-    text: '#000000',
-    background: '#ffffff',
-    backgroundElement: '#F0F0F3',
-    backgroundSelected: '#E0E1E6',
-    textSecondary: '#60646C',
+    background: '#F8FAFC',
+    surface: '#FFFFFF',
+    surfaceSubtle: '#F1F5F9',
+    border: '#E2E8F0',
+    borderSubtle: '#F1F5F9',
+    text: '#0F172A',
+    textSecondary: '#64748B',
+    textMuted: '#94A3B8',
+    primary: '#2563EB',       // Royal Blue
+    primaryLight: '#EFF6FF',
+    secondary: '#10B981',     // Emerald Green
+    secondaryLight: '#ECFDF5',
+    accent: '#8B5CF6',        // Purple accent
+    danger: '#EF4444',        // Crimson Red
+    dangerLight: '#FEF2F2',
+    warning: '#F59E0B',       // Amber
+    warningLight: '#FFFBEB',
+    cardGlass: 'rgba(255, 255, 255, 0.85)',
+    tabBar: 'rgba(255, 255, 255, 0.95)',
   },
   dark: {
-    text: '#ffffff',
-    background: '#000000',
-    backgroundElement: '#212225',
-    backgroundSelected: '#2E3135',
-    textSecondary: '#B0B4BA',
+    background: '#0B0F17',
+    surface: '#161E2E',
+    surfaceSubtle: '#1F293D',
+    border: '#2A364F',
+    borderSubtle: '#1E293B',
+    text: '#F8FAFC',
+    textSecondary: '#94A3B8',
+    textMuted: '#64748B',
+    primary: '#3B82F6',       // Vivid Blue
+    primaryLight: 'rgba(59, 130, 246, 0.15)',
+    secondary: '#10B981',     // Emerald Green
+    secondaryLight: 'rgba(16, 185, 129, 0.15)',
+    accent: '#A78BFA',
+    danger: '#F87171',        // Coral Red
+    dangerLight: 'rgba(248, 113, 113, 0.15)',
+    warning: '#FBBF24',
+    warningLight: 'rgba(251, 191, 36, 0.15)',
+    cardGlass: 'rgba(22, 30, 46, 0.85)',
+    tabBar: 'rgba(11, 15, 23, 0.92)',
   },
 } as const;
 
-export type ThemeColor = keyof typeof Colors.light & keyof typeof Colors.dark;
+export type ThemeColor = keyof typeof Colors.light;
+
+export const Spacing = {
+  xs: 4,
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 24,
+  xxl: 32,
+  xxxl: 48,
+} as const;
+
+export const BorderRadius = {
+  sm: 8,
+  md: 12,
+  lg: 16,
+  xl: 24,
+  full: 9999,
+} as const;
 
 export const Fonts = Platform.select({
   ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
+    sans: 'System',
+    mono: 'Courier',
   },
   default: {
     sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
     mono: 'monospace',
-  },
-  web: {
-    sans: 'var(--font-display)',
-    serif: 'var(--font-serif)',
-    rounded: 'var(--font-rounded)',
-    mono: 'var(--font-mono)',
   },
 });
 
-export const Spacing = {
-  half: 2,
-  one: 4,
-  two: 8,
-  three: 16,
-  four: 24,
-  five: 32,
-  six: 64,
-} as const;
-
-export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
 export const MaxContentWidth = 800;
