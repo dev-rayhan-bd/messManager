@@ -9,7 +9,11 @@ import { Colors } from '../../constants/theme';
 import { Users, UserPlus, Wallet, Check, X } from 'lucide-react-native';
 
 export default function MembersScreen() {
+<<<<<<< HEAD
   const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
+=======
+  const scheme = useColorScheme() ?? 'light';
+>>>>>>> 4421b6378cfb2cde19392af4b60004a53ec334df
   const theme = Colors[scheme];
   const { memberLedger, summary, addDeposit, addMember } = useMessData();
 

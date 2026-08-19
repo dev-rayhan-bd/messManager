@@ -5,7 +5,11 @@ import { Colors } from '../../constants/theme';
 import { LayoutDashboard, Utensils, Receipt, Users } from 'lucide-react-native';
 
 export default function TabLayout() {
+<<<<<<< HEAD
   const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
+=======
+  const scheme = useColorScheme() ?? 'light';
+>>>>>>> 4421b6378cfb2cde19392af4b60004a53ec334df
   const theme = Colors[scheme];
 
   return (
@@ -32,28 +36,44 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Dashboard',
+<<<<<<< HEAD
           tabBarIcon: ({ color, size }) => <LayoutDashboard size={size} color={color as string} />,
+=======
+          tabBarIcon: ({ color, size }) => <LayoutDashboard size={size} color={color} />,
+>>>>>>> 4421b6378cfb2cde19392af4b60004a53ec334df
         }}
       />
       <Tabs.Screen
         name="meals"
         options={{
           title: 'Meals',
+<<<<<<< HEAD
           tabBarIcon: ({ color, size }) => <Utensils size={size} color={color as string} />,
+=======
+          tabBarIcon: ({ color, size }) => <Utensils size={size} color={color} />,
+>>>>>>> 4421b6378cfb2cde19392af4b60004a53ec334df
         }}
       />
       <Tabs.Screen
         name="expenses"
         options={{
           title: 'Expenses',
+<<<<<<< HEAD
           tabBarIcon: ({ color, size }) => <Receipt size={size} color={color as string} />,
+=======
+          tabBarIcon: ({ color, size }) => <Receipt size={size} color={color} />,
+>>>>>>> 4421b6378cfb2cde19392af4b60004a53ec334df
         }}
       />
       <Tabs.Screen
         name="members"
         options={{
           title: 'Ledger',
+<<<<<<< HEAD
           tabBarIcon: ({ color, size }) => <Users size={size} color={color as string} />,
+=======
+          tabBarIcon: ({ color, size }) => <Users size={size} color={color} />,
+>>>>>>> 4421b6378cfb2cde19392af4b60004a53ec334df
         }}
       />
     </Tabs>
