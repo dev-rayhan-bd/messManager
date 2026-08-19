@@ -24,7 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled = false,
   style,
 }) => {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = Colors[scheme];
 
   const variantStyles = {

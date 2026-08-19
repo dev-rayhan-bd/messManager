@@ -18,7 +18,7 @@ export const Badge: React.FC<BadgeProps> = ({
   size = 'md',
   icon,
 }) => {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = Colors[scheme];
 
   const variantStyles = {

@@ -13,7 +13,7 @@ interface MealEntryCardProps {
 }
 
 export const MealEntryCard: React.FC<MealEntryCardProps> = ({ member, onUpdateMeal }) => {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = Colors[scheme];
 
   const totalMeals =

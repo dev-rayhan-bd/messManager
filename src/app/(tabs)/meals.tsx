@@ -9,7 +9,7 @@ import { Colors } from '../../constants/theme';
 import { Utensils, Calendar } from 'lucide-react-native';
 
 export default function MealsScreen() {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = Colors[scheme];
   const { members, updateMemberMeals, summary } = useMessData();
 

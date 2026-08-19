@@ -12,7 +12,7 @@ import { PlusCircle, Sparkles } from 'lucide-react-native';
 import { AddExpenseModal } from '../../components/features/AddExpenseModal';
 
 export default function DashboardScreen() {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = Colors[scheme];
   const { summary, expenses, memberLedger, addExpense, members } = useMessData();
   const [modalVisible, setModalVisible] = useState(false);

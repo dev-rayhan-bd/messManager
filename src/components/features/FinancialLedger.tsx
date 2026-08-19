@@ -23,7 +23,7 @@ interface FinancialLedgerProps {
 }
 
 export const FinancialLedger: React.FC<FinancialLedgerProps> = ({ ledger, onAddDeposit }) => {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = Colors[scheme];
 
   return (

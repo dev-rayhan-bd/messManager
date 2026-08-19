@@ -6,7 +6,7 @@ import { Typography } from './ui/Typography';
 import { Colors, Spacing } from '@/constants/theme';
 
 export function WebBadge() {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = Colors[scheme];
 
   return (

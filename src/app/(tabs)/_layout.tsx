@@ -5,7 +5,7 @@ import { Colors } from '../../constants/theme';
 import { LayoutDashboard, Utensils, Receipt, Users } from 'lucide-react-native';
 
 export default function TabLayout() {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = Colors[scheme];
 
   return (
@@ -32,28 +32,28 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Dashboard',
-          tabBarIcon: ({ color, size }) => <LayoutDashboard size={size} color={color} />,
+          tabBarIcon: ({ color, size }) => <LayoutDashboard size={size} color={color as string} />,
         }}
       />
       <Tabs.Screen
         name="meals"
         options={{
           title: 'Meals',
-          tabBarIcon: ({ color, size }) => <Utensils size={size} color={color} />,
+          tabBarIcon: ({ color, size }) => <Utensils size={size} color={color as string} />,
         }}
       />
       <Tabs.Screen
         name="expenses"
         options={{
           title: 'Expenses',
-          tabBarIcon: ({ color, size }) => <Receipt size={size} color={color} />,
+          tabBarIcon: ({ color, size }) => <Receipt size={size} color={color as string} />,
         }}
       />
       <Tabs.Screen
         name="members"
         options={{
           title: 'Ledger',
-          tabBarIcon: ({ color, size }) => <Users size={size} color={color} />,
+          tabBarIcon: ({ color, size }) => <Users size={size} color={color as string} />,
         }}
       />
     </Tabs>

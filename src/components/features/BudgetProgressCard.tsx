@@ -13,7 +13,7 @@ interface BudgetProgressCardProps {
 }
 
 export const BudgetProgressCard: React.FC<BudgetProgressCardProps> = ({ summary }) => {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = Colors[scheme];
 
   const ratio = summary.budgetLimit > 0 ? summary.totalExpenses / summary.budgetLimit : 0;

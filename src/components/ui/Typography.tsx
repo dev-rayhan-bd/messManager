@@ -18,7 +18,7 @@ export const Typography: React.FC<TypographyProps> = ({
   style,
   ...props
 }) => {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const themeColors = Colors[scheme];
 
   const defaultColor = color ? themeColors[color] : themeColors.text;

@@ -20,7 +20,7 @@ export const AddExpenseModal: React.FC<AddExpenseModalProps> = ({
   onAdd,
   members,
 }) => {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = Colors[scheme];
 
   const [title, setTitle] = useState('');

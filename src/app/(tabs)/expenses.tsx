@@ -11,7 +11,7 @@ import { ExpenseCategory } from '../../types/mess';
 import { PlusCircle, Receipt, DollarSign, Filter } from 'lucide-react-native';
 
 export default function ExpensesScreen() {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = Colors[scheme];
   const { expenses, summary, addExpense, members } = useMessData();
   const [modalVisible, setModalVisible] = useState(false);

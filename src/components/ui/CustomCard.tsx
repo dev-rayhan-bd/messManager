@@ -15,7 +15,7 @@ export const CustomCard: React.FC<CustomCardProps> = ({
   variant = 'glass',
   accentColor,
 }) => {
-  const scheme = useColorScheme() ?? 'light';
+  const scheme = useColorScheme() === 'dark' ? 'dark' : 'light';
   const theme = Colors[scheme];
 
   const getCardStyle = (): ViewStyle => {
